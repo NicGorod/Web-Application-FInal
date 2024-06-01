@@ -1,7 +1,5 @@
-Nicolas Gorodnitchi, 101286342
-
-I attest that I am the sole author of this submitted work and any code borrowed from other sources has been identified by comments placed in my submitted code.
-Nicolas Gorodnitchi, 101286342.
+Author: Nicolas Gorodnitchi
+Description: Recipe managment server, with guest and Admin accounts which can save or delete recipes from a saved list
 
 Installation: npm install
 
@@ -15,5 +13,3 @@ or the admin:
 username: admin, password: admin. 
 Or you can register an account. Then you can use the search bar for searching recipes or keywords in recipes. You can save these or view the details, you can view your saved recipes in the top left, if on an admin account you can view all users and delete them in the top right.
 
-
-Youtube video link: https://youtu.be/R7DATKoWGuM
