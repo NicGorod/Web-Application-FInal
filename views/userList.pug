@@ -1,0 +1,43 @@
+// userList.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title User List
+    link(rel="stylesheet", href="styles/styles.css")
+    style.
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+      .back-button-box {
+        padding: 10px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .delete-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+  body
+    header
+      h1 User List
+      a(href="/main" class="back-button")
+        div.back-button-box Back
+    main
+      table
+        tr
+          th Username
+          th Password
+          th Action
+      script(src="/js/users.js")

@@ -1,0 +1,33 @@
+// savedRecipes.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Saved Recipes
+    link(rel="stylesheet", href="styles/styles.css")
+    style.
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+      .back-button-box {
+        padding: 10px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  body
+    header
+      h1 Saved Recipes
+      a(href="/main" class="back-button")
+        div.back-button-box Back
+    main
+      div#saved-recipes-list
+        // Saved recipes will be displayed here
+    script(src="/js/savedRecipes.js")

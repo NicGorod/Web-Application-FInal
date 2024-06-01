@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Search
+    link(rel="stylesheet", href="styles/styles.css")
+    style.
+      .admin-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+      }
+      .saved-recipes-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+      }
+
+  body
+    header
+      h1 Recipe Search
+    // Add a button to access saved recipes
+    if user
+      a.saved-recipes-button(href="#") Saved Recipes
+      if user.role === 'admin'
+        a.admin-button(href="/userList") User List
+    main
+      div.search-container
+        input(type="text", id="recipe-search", placeholder="Search for recipes...")
+        button#search-button Search
+      div#recipe-results.recipe-results
+        //- Recipe search results will be displayed here
+    script(src="/js/script.js")
+    script.
+      // Add event listener for the Saved Recipes button
+      document.addEventListener('DOMContentLoaded', () => {
+        const savedRecipesButton = document.querySelector('.saved-recipes-button');
+        if (savedRecipesButton) {
+          savedRecipesButton.addEventListener('click', () => {
+            // Redirect to the saved recipes page
+            window.location.href = '/savedRecipes';
+          });
+        }
+      });
